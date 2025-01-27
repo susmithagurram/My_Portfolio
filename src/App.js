@@ -7,7 +7,6 @@ import AI from './pages/AI';
 import Crypto from './pages/Crypto';
 import Software from './pages/Software';
 import Community from './pages/Community';
-import Blogs from './pages/Blogs';
 import { personalInfo, siteConfig } from './config';
 
 const AppContainer = styled.div`
@@ -85,7 +84,6 @@ function App() {
             <Route path="/crypto" element={<Crypto />} />
             <Route path="/software" element={<Software />} />
             <Route path="/community" element={<Community />} />
-            <Route path="/blogs" element={<Blogs />} />
           </Routes>
         </MainContent>
       </AppContainer>

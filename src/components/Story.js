@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaEnvelope } from 'react-icons/fa';
-import { personalInfo, storyContent } from '../config';
+import { personalInfo, storyContent, socialLinks } from '../config';
 
 const StoryContainer = styled.div`
   height: 100vh;
@@ -128,7 +128,7 @@ function Story() {
     <StoryContainer>
       <MenuBar show={show}>
         <ButtonGroup>
-          <MenuButton to="/blogs">My Blogs</MenuButton>
+          <MenuButton as="a" href={socialLinks.substack} target="_blank">My Blogs</MenuButton>
           <ContactButton onClick={handleCopyEmail}>
             {copied ? 'Email copied!' : (
               <>

@@ -1,13 +1,13 @@
 src/
   components/
     ProfileSection.js
-    SocialLinks.js
-    PortfolioGrid.js
     Story.js
+    PortfolioPage.js
   pages/
     AI.js
     Crypto.js
     Software.js
     Community.js
   App.js
+  config.js
   index.css 

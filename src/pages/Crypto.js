@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaHome, FaEnvelope, FaGithub, FaGlobe } from 'react-icons/fa';
-import { projects, experience, achievements, personalInfo } from '../config';
+import { projects, experience, achievements, personalInfo, socialLinks } from '../config';
 
 const PageContainer = styled.div`
   padding: 0 0 20px 0;
@@ -217,7 +217,7 @@ function Crypto() {
             <NavButton to="/">
               <FaHome /> Home
             </NavButton>
-            <NavButton to="/blogs">
+            <NavButton as="a" href={socialLinks.substack} target="_blank">
               My Blogs
             </NavButton>
             <ContactButton onClick={handleCopyEmail}>

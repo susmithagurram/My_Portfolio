@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaHome, FaEnvelope } from 'react-icons/fa';
-import { projects, experience, achievements } from '../config';
+import { experience, achievements, personalInfo, socialLinks } from '../config';
 
 const PageContainer = styled.div`
   padding: 0 0 20px 0;
@@ -163,31 +163,6 @@ const TechItem = styled.span`
   color: #555;
 `;
 
-const StatGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-  margin: 15px 0;
-`;
-
-const StatItem = styled.div`
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  
-  h4 {
-    color: #2196F3;
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  p {
-    color: #666;
-    font-size: 13px;
-  }
-`;
-
 const SectionTitle = styled.h2`
   color: #2196F3;
   font-size: 15px;
@@ -205,14 +180,13 @@ const PageDescription = styled.p`
 
 // Remove all hardcoded data arrays and use the imported ones
 const experiences = experience.community || [];  // Use community experiences from config
-const communityProjects = projects.community || [];     // Use community projects from config
 const communityAchievements = achievements.community || []; // Use community achievements from config
 
 function Community() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('suhas.dasari194@gmail.com');
+    navigator.clipboard.writeText(personalInfo.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -221,25 +195,25 @@ function Community() {
     <PageContainer>
       <MenuBar>
         <Header>
+          <PageTitleHeader>Community Management</PageTitleHeader>
           <NavSection>
             <NavButton to="/">
               <FaHome /> Home
             </NavButton>
-            <NavButton to="/blogs">
+            <NavButton as="a" href={socialLinks.substack} target="_blank">
               My Blogs
             </NavButton>
+            <ContactButton onClick={handleCopyEmail}>
+              {copied ? 'Email copied!' : (
+                <>
+                  Contact <FaEnvelope />
+                </>
+              )}
+            </ContactButton>
           </NavSection>
-          <ContactButton onClick={handleCopyEmail}>
-            {copied ? 'Email copied!' : (
-              <>
-                Contact <FaEnvelope />
-              </>
-            )}
-          </ContactButton>
         </Header>
       </MenuBar>
 
-      <PageTitleHeader>Community Engagement & Leadership</PageTitleHeader>
       <PageDescription>
         Dedicated community leader with experience in student engagement, alumni relations, and social impact initiatives.
         Committed to building meaningful connections and fostering positive change in communities.
@@ -272,50 +246,6 @@ function Community() {
                   </TechList>
                 )}
                 <Description>{project.description}</Description>
-                {project.features && project.features.map((feature, index) => (
-                  <Description key={index}>• {feature}</Description>
-                ))}
-              </ProjectCard>
-            ))}
-          </ProjectGrid>
-        </>
-      )}
-
-      {communityProjects.length > 0 && (
-        <>
-          <SectionTitle>Projects</SectionTitle>
-          <ProjectGrid>
-            {communityProjects.map(project => (
-              <ProjectCard 
-                key={project.id} 
-                backgroundImage={project.title === "Chess Battle" ? "/chess-bg.jpg" : null}
-              >
-                <TitleSection>
-                  <TitleContent>
-                    <ProjectTitle>
-                      {project.icon}
-                      {project.title}
-                    </ProjectTitle>
-                    {project.technologies && (
-                      <TechList>
-                        {project.technologies.map((tech, index) => (
-                          <TechItem key={index}>{tech}</TechItem>
-                        ))}
-                      </TechList>
-                    )}
-                  </TitleContent>
-                </TitleSection>
-                <Description>{project.description}</Description>
-                {project.stats && (
-                  <StatGrid>
-                    {project.stats.map((stat, index) => (
-                      <StatItem key={index}>
-                        <h4>{stat.value}</h4>
-                        <p>{stat.label}</p>
-                      </StatItem>
-                    ))}
-                  </StatGrid>
-                )}
                 {project.features && project.features.map((feature, index) => (
                   <Description key={index}>• {feature}</Description>
                 ))}

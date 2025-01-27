@@ -15,11 +15,12 @@ export const projectImages = {
 
 // Social Links
 export const socialLinks = {
-  github: "https://github.com/suhas",
-  linkedin: "https://linkedin.com/in/suhas",
-  twitter: "https://twitter.com/suhas",
-  telegram: "https://t.me/suhas",
-  etherscan: "https://etherscan.io/address/suhas.eth",
+  github: "https://github.com/suhasdasari",
+  linkedin: "https://linkedin.com/in/suhasdasari",
+  twitter: "https://twitter.com/suhasdasari",
+  telegram: "https://t.me/suhasdasari",
+  etherscan: "https://etherscan.io/address/suhasdasari.eth",
+  substack: "https://suhasdasari.substack.com/",
   // Add more social links as needed
 };
 
@@ -207,6 +208,38 @@ export const experience = {
       ],
       technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
     }
+  ],
+  community: [
+    {
+      id: 1,
+      position: "Community Manager",
+      company: "Shardeum",
+      from: "March 2022",
+      to: "December 2023",
+      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a Community Manager for the discord server",
+      features: [
+        "Understood the community psychology, Implemented growth strategies",
+        "Organized 30+ technical workshops and educational events",
+        "Developed engagement strategies resulting in 500k+ member growth",
+        "Created educational content for blockchain technology"
+      ],
+      technologies: ["Community Management", "Discord", "Organising Events"]
+    },
+    {
+      id: 2,
+      position: "Student Engagement Officer",
+      company: "George Mason University",
+      from: "January 2023",
+      to: "Currently Working",
+      description: "Managing alumni relations and student engagement initiatives at George Mason University",
+      features: [
+        "Reconnected 200+ alumni with the university through personalized outreach",
+        "Organized networking events and alumni meetups",
+        "Managed alumni database and communication channels",
+        "Developed engagement strategies for current students"
+      ],
+      technologies: ["Alumni Relations", "Event Management", "Database Management", "Student Engagement"]
+    }
   ]
 };
 
@@ -222,7 +255,14 @@ export const achievements = {
   ],
   software: [],
   ai: [],
-  community: []
+  community: [
+    "Successfully managed and grew online communities exceeding 1.5 million members",
+    "Organized and executed 50+ educational events and workshops",
+    "Achieved 200% increase in alumni engagement through targeted outreach programs",
+    "Developed and implemented successful community growth strategies",
+    "Created and maintained strong partnerships with educational institutions",
+    "Mentored over 1000 community members in various technical and professional skills"
+  ]
 };
 
 // Blog Posts
