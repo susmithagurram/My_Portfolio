@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaHome, FaEnvelope, FaGithub, FaGlobe } from 'react-icons/fa';
+import { projects, experience, achievements, personalInfo } from '../config';
 
 const PageContainer = styled.div`
   padding: 0 0 20px 0;
@@ -193,46 +194,16 @@ const ContactButton = styled.button`
   }
 `;
 
-// Data
-const experiences = [];  // Empty array since we don't have AI experiences yet
-
-const projects = [
-  {
-    id: 1,
-    title: "Chess Battle",
-    description: "An innovative online chess game that leverages OpenAI's Language Model API to enhance the gaming experience.",
-    features: [
-      "Implemented OpenAI API integration for real-time game commentary",
-      "Developed intelligent move analysis system",
-      "Created interactive learning features for players",
-      "Deployed and maintained on Vercel platform"
-    ],
-    technologies: ["React.js", "OpenAI API", "JavaScript", "Web Development"],
-    github: "https://github.com/suhasdasari/chessbattlefinal",
-    live: "https://chessbattle-vf.vercel.app/"
-  },
-  {
-    id: 2,
-    title: "EVM based Faucet AI agent",
-    description: "An Ai agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
-    features: [
-      "Implemented OpenAI API integration",
-      "used viem SDK to interact with the blockchain",
-      "Created a telegram bot to interact with users in a telegram group"
-    ],
-    technologies: ["viem SDK", "Telegram Bot", "OpenAI API"],
-    github: "https://github.com/suhasdasari/faucets-abstract2"
-  }
-];
-
-const achievements = [
-];
+// Remove all hardcoded data arrays and use the imported ones
+const experiences = experience.ai || [];  // Use AI experiences from config
+const aiProjects = projects.ai || [];     // Use AI projects from config
+const aiAchievements = achievements.ai || []; // Use AI achievements from config
 
 function AI() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('suhas.dasari194@gmail.com');
+    navigator.clipboard.writeText(personalInfo.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -292,20 +263,14 @@ function AI() {
         </>
       )}
 
-      {projects.length > 0 && (
+      {aiProjects.length > 0 && (
         <>
           <SectionTitle>Projects</SectionTitle>
           <ProjectGrid>
-            {projects.map(project => (
+            {aiProjects.map(project => (
               <ProjectCard 
                 key={project.id} 
-                backgroundImage={
-                  project.title === "Chess Battle" 
-                    ? "/chess-bg.jpg" 
-                    : project.title === "EVM based Faucet AI agent" 
-                      ? "/faucet.jpg" 
-                      : null
-                }
+                backgroundImage={project.backgroundImage}
               >
                 <TitleSection>
                   <TitleContent>
@@ -356,10 +321,10 @@ function AI() {
         </>
       )}
 
-      {achievements && achievements.length > 0 && (
+      {aiAchievements && aiAchievements.length > 0 && (
         <>
           <SectionTitle>Key Achievements</SectionTitle>
-          {achievements.map((achievement, index) => (
+          {aiAchievements.map((achievement, index) => (
             <Description key={index} isAchievement>• {achievement}</Description>
           ))}
         </>

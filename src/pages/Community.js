@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaHome, FaEthereum, FaUsers, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaEnvelope } from 'react-icons/fa';
+import { projects, experience, achievements } from '../config';
 
 const PageContainer = styled.div`
   padding: 0 0 20px 0;
@@ -202,55 +203,10 @@ const PageDescription = styled.p`
   margin-bottom: 25px;
 `;
 
-// Project data
-const experiences = [
-  {
-    id: 1,
-    position: "Community Manager",
-    company: "Shardeum",
-    from: "March 2022",
-    to: "December 2023",
-    icon: <FaUsers />,
-    description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
-    features: [
-      "Understood the community psychology, Implemented growth strategies",
-      "Organized 30+ technical workshops and educational events",
-      "Developed engagement strategies resulting in 500k+ member growth",
-      "Created educational content for blockchain technology"
-    ],
-    technologies: ["Community Management", "Discord", "Organising Events"]
-  },
-  {
-    id: 2,
-    position: "Community & Marketing Manager",
-    company: "DotNames",
-    from: "January 2023",
-    to: "Currently Working",
-    icon: <FaEthereum />,
-    description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
-    features: [
-      "Bootstraped community and marketing strategies for twitter, discord, telegram",
-      "Implemented quest campaings with 200k+ participants",
-      "Created marketing content for the community",
-      "Organised 20+ events, 100+ partnerships for the community",
-      "Launched mutliple Name Services on EVM and Cosmos Blockchains"
-    ],
-    technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
-  }
-];
-
-const achievements = [
-  "Built and managed crypto communities with over 1.5 million active members",
-  "Successfully organized and executed 50+ educational events and workshops",
-  "Mentored 1000+ students in blockchain technology and smart contract development",
-  "Established partnerships with 7 universities for blockchain education programs",
-  "Partnered with 100+ projects in the blockchain space including top Layer 1 blockchains",
-  "Implemented quest campains with 200k+ participants using crew3, galxe, etc"
-];
-
-const projects = [
-  
-];
+// Remove all hardcoded data arrays and use the imported ones
+const experiences = experience.community || [];  // Use community experiences from config
+const communityProjects = projects.community || [];     // Use community projects from config
+const communityAchievements = achievements.community || []; // Use community achievements from config
 
 function Community() {
   const [copied, setCopied] = useState(false);
@@ -325,11 +281,11 @@ function Community() {
         </>
       )}
 
-      {projects.length > 0 && (
+      {communityProjects.length > 0 && (
         <>
           <SectionTitle>Projects</SectionTitle>
           <ProjectGrid>
-            {projects.map(project => (
+            {communityProjects.map(project => (
               <ProjectCard 
                 key={project.id} 
                 backgroundImage={project.title === "Chess Battle" ? "/chess-bg.jpg" : null}
@@ -369,10 +325,10 @@ function Community() {
         </>
       )}
 
-      {achievements && achievements.length > 0 && (
+      {communityAchievements && communityAchievements.length > 0 && (
         <>
           <SectionTitle>Key Achievements</SectionTitle>
-          {achievements.map((achievement, index) => (
+          {communityAchievements.map((achievement, index) => (
             <Description key={index} isAchievement>• {achievement}</Description>
           ))}
         </>

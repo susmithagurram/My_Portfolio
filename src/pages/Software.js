@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaHome, FaDatabase, FaMobile, FaDesktop, FaEthereum, FaEnvelope, FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaHome, FaEnvelope, FaGithub, FaGlobe } from 'react-icons/fa';
+import { projects, experience, achievements, personalInfo } from '../config';
 
 const PageContainer = styled.div`
   padding: 0 0 20px 0;
@@ -193,92 +194,16 @@ const ContactButton = styled.button`
   }
 `;
 
-// Data
-const experiences = [
-  {
-    id: 1,
-    position: "Software Engineer",
-    company: "Zensar Technologies",
-    from: "July 2022",
-    to: "Currently Working",
-    icon: <FaDatabase />,
-    description: "Led development of automated banking solutions at NedBank",
-    features: [
-      "Designed and implemented automated banking processes using COBOL and JCL",
-      "Managed 1,000+ real-time automated jobs in the database",
-      "Achieved seamless execution of critical banking processes",
-      "Implemented robust monitoring system using Control-M"
-    ],
-    technologies: ["Mainframe", "COBOL", "JCL", "SQL", "Control-M", "SQL", "Java", "Jira"]
-  },
-  {
-    id: 2,
-    position: "Student Engagement Officer",
-    company: "George Mason University",
-    from: "January 2023",
-    to: "Currently Working",
-    icon: <FaDatabase />,
-    description: "Managed a portfolio of local constituents and updated the Alumni Database",
-    features: [
-      "Reconnected 200+ alumni with the university through personalized outreach",
-      "Utilized Salesforce CRM to maintain and analyze data"
-    ],
-    technologies: ["Salesforce", "CRM"]
-  }
-];
-
-const achievements = [
-];
-
-const projects = [
-  {
-    id: 1,
-    title: "Chess Battle",
-    icon: <FaDesktop />,
-    description: "An innovative online chess game that leverages OpenAI's Language Model API to enhance the gaming experience.",
-    features: [
-      "Implemented OpenAI API integration for real-time game commentary",
-      "Developed intelligent move analysis system",
-      "Created interactive learning features for players",
-      "Deployed and maintained on Vercel platform"
-    ],
-    technologies: ["React.js", "OpenAI API", "JavaScript", "Web Development"],
-    github: "https://github.com/suhasdasari/chessbattlefinal",
-    live: "https://chessbattle-vf.vercel.app/"
-  },
-  {
-    id: 2,
-    title: "EVM based Faucet AI agent",
-    icon: <FaEthereum />,
-    description: "An Ai agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
-    features: [
-      "Implemented OpenAI API integration",
-      "used viem SDK to interact with the blockchain",
-      "Created a telegram bot to interact with users in a telegram group"
-    ],
-    technologies: ["typescript","viem SDK", "Telegram Bot", "OpenAI API"],
-    github: "https://github.com/suhasdasari/faucets-abstract2"
-  },
-  {
-    id: 1,
-    title: "StepUp Health App",
-    icon: <FaMobile />,
-    description: "A comprehensive health and fitness tracking mobile application for iOS and Android",
-    features: [
-      "Developed cross-platform mobile app using React Native",
-      "Implemented real-time step counting and calorie tracking",
-      "Created intuitive UI/UX for health activity monitoring",
-      "Integrated health metrics tracking system"
-    ],
-    technologies: ["React Native", "JavaScript", "Mobile Development", "Health APIs"]
-  }
-];
+// Remove all hardcoded data arrays and use the imported ones
+const experiences = experience.software || [];  // Use software experiences from config
+const softwareProjects = projects.software || [];     // Use software projects from config
+const softwareAchievements = achievements.software || []; // Use software achievements from config
 
 function Software() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('suhas.dasari194@gmail.com');
+    navigator.clipboard.writeText(personalInfo.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -347,22 +272,14 @@ function Software() {
         </>
       )}
 
-      {projects.length > 0 && (
+      {softwareProjects.length > 0 && (
         <>
           <SectionTitle>Projects</SectionTitle>
           <ProjectGrid>
-            {projects.map(project => (
+            {softwareProjects.map(project => (
               <ProjectCard 
                 key={project.id} 
-                backgroundImage={
-                  project.title === "Chess Battle" 
-                    ? "/chess-bg.jpg" 
-                    : project.title === "EVM based Faucet AI agent" 
-                      ? "/faucet.jpg" 
-                      : project.title === "StepUp Health App"
-                        ? "/stepup.jpg"
-                        : null
-                }
+                backgroundImage={project.backgroundImage}
               >
                 <TitleSection>
                   <TitleContent>
@@ -413,10 +330,10 @@ function Software() {
         </>
       )}
 
-      {achievements && achievements.length > 0 && (
+      {softwareAchievements && softwareAchievements.length > 0 && (
         <>
           <SectionTitle>Key Achievements</SectionTitle>
-          {achievements.map((achievement, index) => (
+          {softwareAchievements.map((achievement, index) => (
             <Description key={index} isAchievement>• {achievement}</Description>
           ))}
         </>

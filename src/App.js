@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import ProfileSection from './components/ProfileSection';
@@ -8,6 +8,7 @@ import Crypto from './pages/Crypto';
 import Software from './pages/Software';
 import Community from './pages/Community';
 import Blogs from './pages/Blogs';
+import { personalInfo, siteConfig } from './config';
 
 const AppContainer = styled.div`
   display: flex;
@@ -33,6 +34,44 @@ const MainContent = styled.div`
 `;
 
 function App() {
+  useEffect(() => {
+    // Handle wallet provider errors
+    const handleError = (event) => {
+      if (event.message?.includes('walletRouter')) {
+        // Suppress the wallet provider error
+        event.preventDefault();
+      }
+    };
+    window.addEventListener('error', handleError);
+
+    // Update document metadata
+    try {
+      document.title = personalInfo.name;
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', siteConfig.description);
+      }
+
+      const favicon = document.querySelector('link[rel="icon"]');
+      if (favicon) {
+        favicon.href = personalInfo.profilePicture;
+      }
+
+      const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+      if (appleIcon) {
+        appleIcon.href = personalInfo.profilePicture;
+      }
+    } catch (error) {
+      console.warn('Error updating document metadata:', error);
+    }
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('error', handleError);
+    };
+  }, []);
+
   return (
     <Router>
       <AppContainer>

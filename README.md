@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio website built with React. Features multiple portfolio sections, project showcases, and professional experience displays.
 
-## Available Scripts
+## Quick Start
 
-In the project directory, you can run:
+1. Fork this repository
+2. Clone your forked repository
+3. Install dependencies:
+```bash
+npm install
+```
+4. Start the development server:
+```bash
+npm start
+```
 
-### `npm start`
+## Customization
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Basic Configuration
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+All personal information and content can be configured in a single file: `src/config.js`
 
-### `npm test`
+Edit the following sections in `config.js`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `personalInfo`: Your name, email, profile picture, role, etc.
+- `socialLinks`: Your social media links
+- `portfolioSections`: Configure which sections appear in your portfolio
+- `projects`: Your projects for each section
+- `experience`: Your professional experience
+- `achievements`: Your achievements in different areas
+- `siteConfig`: Website configuration (title, colors, etc.)
 
-### `npm run build`
+### 2. Adding Your Profile Picture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Add your profile picture to the `public` folder
+2. Update the `profilePicture` path in `personalInfo` section of `config.js`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Project Background Images
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Add project background images to the `public` folder
+2. Update the `backgroundImage` paths in the projects section of `config.js`
 
-### `npm run eject`
+### 4. Customizing Colors
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Edit the `siteConfig` section in `config.js`:
+```javascript
+export const siteConfig = {
+  primaryColor: "#2196F3",    // Change to your preferred primary color
+  secondaryColor: "#1a1a1a"   // Change to your preferred secondary color
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Enabling/Disabling Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Toggle blog section: Set `showBlog` in `siteConfig`
+- Remove sections: Delete or comment out sections in `portfolioSections`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
 
-## Learn More
+- 📱 Responsive Design
+- 🎨 Customizable Themes
+- 📂 Multiple Portfolio Sections
+- 🖼️ Project Background Images
+- 📊 Professional Experience Display
+- 🏆 Achievements Section
+- 📝 Blog Support
+- 🔗 Social Media Integration
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React.js
+- Styled Components
+- React Router
+- React Icons
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+MIT License - feel free to use this template for your personal portfolio!
 
-### Analyzing the Bundle Size
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Created by [Suhas Dasari](https://github.com/suhasdasari)
