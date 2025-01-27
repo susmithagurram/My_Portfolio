@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  line-height: 1.5;
+  color: #333;
+  text-transform: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Add custom font styles for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* Ensure no text transformation for regular content */
+p, span, div {
+  text-transform: none;
+  font-family: 'Lora', serif;
+}
