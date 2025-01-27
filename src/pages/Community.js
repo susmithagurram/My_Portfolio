@@ -18,11 +18,24 @@ const MenuBar = styled.div`
 
 const Header = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const PageTitleHeader = styled.h1`
+  color: #1a1a1a;
+  font-size: 17px;
+  margin: 0;
+  font-family: 'Cinzel Decorative', cursive;
+  padding: 0;
+`;
+
+const NavSection = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
 `;
 
 const NavButton = styled(Link)`
@@ -72,11 +85,33 @@ const ProjectGrid = styled.div`
 
 const ProjectCard = styled.div`
   background-color: #fff;
+  background-image: ${props => props.backgroundImage ? `url(${props.backgroundImage})` : 'none'};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 15px;
   transition: all 0.3s ease;
   height: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${props => props.backgroundImage ? 'rgba(255, 255, 255, 0.85)' : 'none'};
+    border-radius: 8px;
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -160,13 +195,6 @@ const SectionTitle = styled.h2`
   border-bottom: 2px solid #eee;
 `;
 
-const PageTitle = styled.h1`
-  color: #1a1a1a;
-  font-size: 17px;
-  margin-bottom: 15px;
-  font-family: 'Cinzel Decorative', cursive;
-`;
-
 const PageDescription = styled.p`
   color: #666;
   font-size: 0.9rem;
@@ -237,12 +265,14 @@ function Community() {
     <PageContainer>
       <MenuBar>
         <Header>
-          <NavButton to="/">
-            <FaHome /> Home
-          </NavButton>
-          <NavButton to="/blogs">
-            My Blogs
-          </NavButton>
+          <NavSection>
+            <NavButton to="/">
+              <FaHome /> Home
+            </NavButton>
+            <NavButton to="/blogs">
+              My Blogs
+            </NavButton>
+          </NavSection>
           <ContactButton onClick={handleCopyEmail}>
             {copied ? 'Email copied!' : (
               <>
@@ -253,7 +283,7 @@ function Community() {
         </Header>
       </MenuBar>
 
-      <PageTitle>Community Engagement & Leadership</PageTitle>
+      <PageTitleHeader>Community Engagement & Leadership</PageTitleHeader>
       <PageDescription>
         Dedicated community leader with experience in student engagement, alumni relations, and social impact initiatives.
         Committed to building meaningful connections and fostering positive change in communities.
@@ -300,7 +330,10 @@ function Community() {
           <SectionTitle>Projects</SectionTitle>
           <ProjectGrid>
             {projects.map(project => (
-              <ProjectCard key={project.id}>
+              <ProjectCard 
+                key={project.id} 
+                backgroundImage={project.title === "Chess Battle" ? "/chess-bg.jpg" : null}
+              >
                 <TitleSection>
                   <TitleContent>
                     <ProjectTitle>

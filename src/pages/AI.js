@@ -57,11 +57,33 @@ const ProjectGrid = styled.div`
 
 const ProjectCard = styled.div`
   background-color: #fff;
+  background-image: ${props => props.backgroundImage ? `url(${props.backgroundImage})` : 'none'};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 15px;
   transition: all 0.3s ease;
   height: 100%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${props => props.backgroundImage ? 'rgba(255, 255, 255, 0.85)' : 'none'};
+    border-radius: 8px;
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -141,6 +163,7 @@ const PageTitleHeader = styled.h1`
   font-size: 17px;
   margin: 0;
   font-family: 'Cinzel Decorative', cursive;
+  padding: 0;
 `;
 
 const PageDescription = styled.p`
@@ -274,7 +297,16 @@ function AI() {
           <SectionTitle>Projects</SectionTitle>
           <ProjectGrid>
             {projects.map(project => (
-              <ProjectCard key={project.id}>
+              <ProjectCard 
+                key={project.id} 
+                backgroundImage={
+                  project.title === "Chess Battle" 
+                    ? "/chess-bg.jpg" 
+                    : project.title === "EVM based Faucet AI agent" 
+                      ? "/faucet.jpg" 
+                      : null
+                }
+              >
                 <TitleSection>
                   <TitleContent>
                     <ProjectTitle>
