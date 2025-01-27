@@ -117,9 +117,9 @@ function ProfileSection() {
       <PortfolioSection>
         <PortfolioTitle>Portfolio's</PortfolioTitle>
         <PortfolioGrid>
+          <PortfolioItem to="/software">Software<br/>Engineering</PortfolioItem>
           <PortfolioItem to="/ai">AI</PortfolioItem>
           <PortfolioItem to="/crypto">Crypto/<br/>Blockchain</PortfolioItem>
-          <PortfolioItem to="/software">Software<br/>Engineering</PortfolioItem>
           <PortfolioItem to="/community">Community<br/>Management</PortfolioItem>
         </PortfolioGrid>
       </PortfolioSection>

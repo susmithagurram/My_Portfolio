@@ -64,20 +64,19 @@ const ContactButton = styled.button`
 `;
 
 const ProjectGrid = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
 `;
 
 const ProjectCard = styled.div`
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 
   &:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -90,6 +89,7 @@ const ProjectTitle = styled.h3`
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 14px;
 `;
 
 const TitleSection = styled.div`
@@ -97,7 +97,7 @@ const TitleSection = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 `;
 
 const TitleContent = styled.div`
@@ -108,9 +108,9 @@ const TitleContent = styled.div`
 
 const Description = styled.p`
   color: #333;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.4;
-  margin-bottom: ${props => props.isAchievement ? '4px' : '8px'};
+  margin-bottom: ${props => props.isAchievement ? '3px' : '6px'};
 `;
 
 const TechList = styled.div`
@@ -123,7 +123,7 @@ const TechItem = styled.span`
   background: #f0f0f0;
   padding: 5px 12px;
   border-radius: 15px;
-  font-size: 13px;
+  font-size: 11px;
   color: #555;
 `;
 
@@ -154,16 +154,16 @@ const StatItem = styled.div`
 
 const SectionTitle = styled.h2`
   color: #2196F3;
-  font-size: 16px;
-  margin: 40px 0 20px;
-  padding-bottom: 10px;
+  font-size: 15px;
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
   border-bottom: 2px solid #eee;
 `;
 
 const PageTitle = styled.h1`
   color: #1a1a1a;
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 17px;
+  margin-bottom: 15px;
   font-family: 'Cinzel Decorative', cursive;
 `;
 
@@ -171,53 +171,58 @@ const PageDescription = styled.p`
   color: #666;
   font-size: 0.9rem;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 `;
 
 // Project data
 const experiences = [
-    {
-      id: 1,
-      title: "Community Manager for Shardeum",
-      icon: <FaUsers />,
-      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
-      features: [
-        "Understood the community psychology, Implemented growth strategies",
-        "Organized 30+ technical workshops and educational events",
-        "Developed engagement strategies resulting in 500k+ member growth",
-        "Created educational content for blockchain technology"
-      ],
-      technologies: ["Community Management", "Discord", "Organising Events"]
-    },
+  {
+    id: 1,
+    position: "Community Manager",
+    company: "Shardeum",
+    from: "March 2022",
+    to: "December 2023",
+    icon: <FaUsers />,
+    description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
+    features: [
+      "Understood the community psychology, Implemented growth strategies",
+      "Organized 30+ technical workshops and educational events",
+      "Developed engagement strategies resulting in 500k+ member growth",
+      "Created educational content for blockchain technology"
+    ],
+    technologies: ["Community Management", "Discord", "Organising Events"]
+  },
+  {
+    id: 2,
+    position: "Community & Marketing Manager",
+    company: "DotNames",
+    from: "January 2023",
+    to: "Currently Working",
+    icon: <FaEthereum />,
+    description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
+    features: [
+      "Bootstraped community and marketing strategies for twitter, discord, telegram",
+      "Implemented quest campaings with 200k+ participants",
+      "Created marketing content for the community",
+      "Organised 20+ events, 100+ partnerships for the community",
+      "Launched mutliple Name Services on EVM and Cosmos Blockchains"
+    ],
+    technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
+  }
+];
+
+const achievements = [
+  "Built and managed crypto communities with over 1.5 million active members",
+  "Successfully organized and executed 50+ educational events and workshops",
+  "Mentored 1000+ students in blockchain technology and smart contract development",
+  "Established partnerships with 7 universities for blockchain education programs",
+  "Partnered with 100+ projects in the blockchain space including top Layer 1 blockchains",
+  "Implemented quest campains with 200k+ participants using crew3, galxe, etc"
+];
+
+const projects = [
   
-    {
-      id: 2,
-      title: "Community & Marketing Manager for DotNames",
-      icon: <FaEthereum />,
-      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
-      features: [
-        "Bootstraped community and marketing strategies for twitter, discord, telegram",
-        "Implemented quest campaings with 200k+ participants",
-        "Created marketing content for the community",
-        "Organised 20+ events, 100+ partnerships for the community",
-        "Launched mutliple Name Services on EVM and Cosmos Blockchains"
-      ],
-      technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
-    }
-  ];
-  
-  const achievements = [
-    "Built and managed crypto communities with over 1.5 million active members",
-    "Successfully organized and executed 50+ educational events and workshops",
-    "Mentored 1000+ students in blockchain technology and smart contract development",
-    "Established partnerships with 7 universities for blockchain education programs",
-    "Partnered with 100+ projects in the blockchain space including top Layer 1 blockchains",
-    "Implemented quest campains with 200k+ participants using crew3, galxe, etc"
-  ];
-  
-  const projects = [
-    
-  ];
+];
 
 function Community() {
   const [copied, setCopied] = useState(false);
@@ -264,28 +269,23 @@ function Community() {
                   <TitleContent>
                     <ProjectTitle>
                       {project.icon}
-                      {project.title}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                        <div>{project.position} at {project.company}</div>
+                        <div style={{ fontSize: '14px', color: '#666' }}>
+                          {project.from} - {project.to}
+                        </div>
+                      </div>
                     </ProjectTitle>
-                    {project.technologies && (
-                      <TechList>
-                        {project.technologies.map((tech, index) => (
-                          <TechItem key={index}>{tech}</TechItem>
-                        ))}
-                      </TechList>
-                    )}
                   </TitleContent>
                 </TitleSection>
-                <Description>{project.description}</Description>
-                {project.stats && (
-                  <StatGrid>
-                    {project.stats.map((stat, index) => (
-                      <StatItem key={index}>
-                        <h4>{stat.value}</h4>
-                        <p>{stat.label}</p>
-                      </StatItem>
+                {project.technologies && (
+                  <TechList style={{ marginBottom: '15px' }}>
+                    {project.technologies.map((tech, index) => (
+                      <TechItem key={index}>{tech}</TechItem>
                     ))}
-                  </StatGrid>
+                  </TechList>
                 )}
+                <Description>{project.description}</Description>
                 {project.features && project.features.map((feature, index) => (
                   <Description key={index}>• {feature}</Description>
                 ))}

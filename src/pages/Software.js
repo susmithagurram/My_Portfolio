@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaHome, FaDatabase, FaMobile, FaDesktop, FaEthereum, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaDatabase, FaMobile, FaDesktop, FaEthereum, FaEnvelope, FaGithub, FaGlobe } from 'react-icons/fa';
 
 const PageContainer = styled.div`
   padding: 0 0 20px 0;
@@ -18,11 +18,16 @@ const MenuBar = styled.div`
 
 const Header = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const NavSection = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
 `;
 
 const NavButton = styled(Link)`
@@ -44,20 +49,19 @@ const NavButton = styled(Link)`
 `;
 
 const ProjectGrid = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
 `;
 
 const ProjectCard = styled.div`
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 
   &:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -70,6 +74,7 @@ const ProjectTitle = styled.h3`
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 14px;
 `;
 
 const TitleSection = styled.div`
@@ -77,7 +82,7 @@ const TitleSection = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 `;
 
 const TitleContent = styled.div`
@@ -86,11 +91,27 @@ const TitleContent = styled.div`
   gap: 15px;
 `;
 
+const ProjectLinks = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+`;
+
+const LinkIcon = styled.a`
+  color: #666;
+  font-size: 20px;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: #2196F3;
+  }
+`;
+
 const Description = styled.p`
   color: #333;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.4;
-  margin-bottom: ${props => props.isAchievement ? '4px' : '8px'};
+  margin-bottom: ${props => props.isAchievement ? '3px' : '6px'};
 `;
 
 const TechList = styled.div`
@@ -103,22 +124,22 @@ const TechItem = styled.span`
   background: #f0f0f0;
   padding: 5px 12px;
   border-radius: 15px;
-  font-size: 13px;
+  font-size: 11px;
   color: #555;
 `;
 
 const SectionTitle = styled.h2`
-  color: #2196F3;
-  font-size: 16px;
-  margin: 40px 0 20px;
-  padding-bottom: 10px;
+  color: #1a1a1a;
+  font-size: 15px;
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
   border-bottom: 2px solid #eee;
 `;
 
-const PageTitle = styled.h1`
+const PageTitleHeader = styled.h1`
   color: #1a1a1a;
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 17px;
+  margin: 0;
   font-family: 'Cinzel Decorative', cursive;
 `;
 
@@ -126,7 +147,7 @@ const PageDescription = styled.p`
   color: #666;
   font-size: 0.9rem;
   line-height: 1.6;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 `;
 
 const ContactButton = styled.button`
@@ -153,7 +174,10 @@ const ContactButton = styled.button`
 const experiences = [
   {
     id: 1,
-    title: "Software Engineer at Zensar Technologies",
+    position: "Software Engineer",
+    company: "Zensar Technologies",
+    from: "July 2022",
+    to: "Currently Working",
     icon: <FaDatabase />,
     description: "Led development of automated banking solutions at NedBank",
     features: [
@@ -162,11 +186,14 @@ const experiences = [
       "Achieved seamless execution of critical banking processes",
       "Implemented robust monitoring system using Control-M"
     ],
-    technologies: ["COBOL", "JCL", "SQL", "Control-M", "SQL", "Java", "Jira"]
+    technologies: ["Mainframe", "COBOL", "JCL", "SQL", "Control-M", "SQL", "Java", "Jira"]
   },
   {
     id: 2,
-    title: "Student Engagement Officer at George Mason University",
+    position: "Student Engagement Officer",
+    company: "George Mason University",
+    from: "January 2023",
+    to: "Currently Working",
     icon: <FaDatabase />,
     description: "Managed a portfolio of local constituents and updated the Alumni Database",
     features: [
@@ -219,7 +246,7 @@ const projects = [
       "used viem SDK to interact with the blockchain",
       "Created a telegram bot to interact with users in a telegram group"
     ],
-    technologies: ["viem SDK", "Telegram Bot", "OpenAI API"],
+    technologies: ["typescript","viem SDK", "Telegram Bot", "OpenAI API"],
     github: "https://github.com/suhasdasari/faucets-abstract2"
   }
 ];
@@ -237,26 +264,28 @@ function Software() {
     <PageContainer>
       <MenuBar>
         <Header>
-          <NavButton to="/">
-            <FaHome /> Home
-          </NavButton>
-          <NavButton to="/blogs">
-            My Blogs
-          </NavButton>
-          <ContactButton onClick={handleCopyEmail}>
-            {copied ? 'Email copied!' : (
-              <>
-                Contact <FaEnvelope />
-              </>
-            )}
-          </ContactButton>
+          <PageTitleHeader>Software Engineering</PageTitleHeader>
+          <NavSection>
+            <NavButton to="/">
+              <FaHome /> Home
+            </NavButton>
+            <NavButton to="/blogs">
+              My Blogs
+            </NavButton>
+            <ContactButton onClick={handleCopyEmail}>
+              {copied ? 'Email copied!' : (
+                <>
+                  Contact <FaEnvelope />
+                </>
+              )}
+            </ContactButton>
+          </NavSection>
         </Header>
       </MenuBar>
 
-      <PageTitle>Software Engineering</PageTitle>
       <PageDescription>
-        Experienced software engineer specializing in banking automation systems and mobile application development.
-        Proficient in both legacy systems and modern technologies, with a focus on creating efficient, scalable solutions.
+        Exploring the intersection of artificial intelligence and user experience through innovative projects
+        and applications. Specializing in AI integration, language models, and intelligent system development.
       </PageDescription>
 
       {experiences.length > 0 && (
@@ -269,17 +298,22 @@ function Software() {
                   <TitleContent>
                     <ProjectTitle>
                       {project.icon}
-                      {project.title}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                        <div>{project.position} at {project.company}</div>
+                        <div style={{ fontSize: '14px', color: '#666' }}>
+                          {project.from} - {project.to}
+                        </div>
+                      </div>
                     </ProjectTitle>
-                    {project.technologies && (
-                      <TechList>
-                        {project.technologies.map((tech, index) => (
-                          <TechItem key={index}>{tech}</TechItem>
-                        ))}
-                      </TechList>
-                    )}
                   </TitleContent>
                 </TitleSection>
+                {project.technologies && (
+                  <TechList style={{ marginBottom: '15px' }}>
+                    {project.technologies.map((tech, index) => (
+                      <TechItem key={index}>{tech}</TechItem>
+                    ))}
+                  </TechList>
+                )}
                 <Description>{project.description}</Description>
                 {project.features && project.features.map((feature, index) => (
                   <Description key={index}>• {feature}</Description>
@@ -302,15 +336,39 @@ function Software() {
                       {project.icon}
                       {project.title}
                     </ProjectTitle>
-                    {project.technologies && (
-                      <TechList>
-                        {project.technologies.map((tech, index) => (
-                          <TechItem key={index}>{tech}</TechItem>
-                        ))}
-                      </TechList>
-                    )}
                   </TitleContent>
+                  {(project.github || project.live) && (
+                    <ProjectLinks>
+                      {project.github && (
+                        <LinkIcon 
+                          href={project.github}
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          title="View source code on GitHub"
+                        >
+                          <FaGithub />
+                        </LinkIcon>
+                      )}
+                      {project.live && (
+                        <LinkIcon 
+                          href={project.live}
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          title="Visit live site"
+                        >
+                          <FaGlobe />
+                        </LinkIcon>
+                      )}
+                    </ProjectLinks>
+                  )}
                 </TitleSection>
+                {project.technologies && (
+                  <TechList style={{ marginBottom: '15px' }}>
+                    {project.technologies.map((tech, index) => (
+                      <TechItem key={index}>{tech}</TechItem>
+                    ))}
+                  </TechList>
+                )}
                 <Description>{project.description}</Description>
                 {project.features && project.features.map((feature, index) => (
                   <Description key={index}>• {feature}</Description>
