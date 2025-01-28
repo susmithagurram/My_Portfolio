@@ -1,6 +1,6 @@
 // Personal Information
 export const personalInfo = {
-  name: "Suhas Dasar",
+  name: "Suhas Dasari",
   email: "suhas.dasari194@gmail.com",
   profilePicture: "/my-profile-picture.jpeg",
   location: "Virginia, United States",
