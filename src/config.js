@@ -151,8 +151,8 @@ export const experience = {
       id: 1,
       position: "Software Engineer",
       company: "Zensar Technologies",
-      from: "July 2022",
-      to: "Currently Working",
+      from: "March 2022",
+      to: "June 2023",
       description: "Led development of automated banking solutions at NedBank",
       features: [
         "Designed and implemented automated banking processes using COBOL and JCL",
@@ -166,7 +166,7 @@ export const experience = {
       id: 2,
       position: "Student Engagement Officer",
       company: "George Mason University",
-      from: "January 2023",
+      from: "January 2024",
       to: "Currently Working",
       description: "Managed a portfolio of local constituents and updated the Alumni Database",
       features: [
@@ -181,8 +181,8 @@ export const experience = {
       id: 1,
       position: "Community Manager",
       company: "Shardeum",
-      from: "March 2022",
-      to: "December 2023",
+      from: "October 2022",
+      to: "July 2023",
       description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
       features: [
         "Understood the community psychology, Implemented growth strategies",
@@ -197,7 +197,7 @@ export const experience = {
       position: "Community & Marketing Manager",
       company: "DotNames",
       from: "January 2023",
-      to: "Currently Working",
+      to: "July 2023",
       description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
       features: [
         "Bootstraped community and marketing strategies for twitter, discord, telegram",
@@ -214,8 +214,8 @@ export const experience = {
       id: 1,
       position: "Community Manager",
       company: "Shardeum",
-      from: "March 2022",
-      to: "December 2023",
+      from: "October 2022",
+      to: "July 2023",
       description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a Community Manager for the discord server",
       features: [
         "Understood the community psychology, Implemented growth strategies",
@@ -227,18 +227,19 @@ export const experience = {
     },
     {
       id: 2,
-      position: "Student Engagement Officer",
-      company: "George Mason University",
+      position: "Community & Marketing Manager",
+      company: "DotNames",
       from: "January 2023",
-      to: "Currently Working",
-      description: "Managing alumni relations and student engagement initiatives at George Mason University",
+      to: "July 2023",
+      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
       features: [
-        "Reconnected 200+ alumni with the university through personalized outreach",
-        "Organized networking events and alumni meetups",
-        "Managed alumni database and communication channels",
-        "Developed engagement strategies for current students"
+        "Bootstraped community and marketing strategies for twitter, discord, telegram",
+        "Implemented quest campaings with 200k+ participants",
+        "Created marketing content for the community",
+        "Organised 20+ events, 100+ partnerships for the community",
+        "Launched mutliple Name Services on EVM and Cosmos Blockchains"
       ],
-      technologies: ["Alumni Relations", "Event Management", "Database Management", "Student Engagement"]
+      technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
     }
   ]
 };
