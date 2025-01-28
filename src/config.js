@@ -320,6 +320,10 @@ export const storyContent = {
       title: "Journey to US - George Mason University - Student Engagement Officer",
       content: "In 2023 I moved to US and joined GMU on F-1 student visa to do my Masters in Information Systems. And in Jan 2024 I got an on-campus part-time as a Student Engagement Officer (current profession) in Office of Advancements & Alumni Relations. This role involved meeting alumni both offline and online, managing data in the Salesforce, and cold emailing prospects. Indeed this is a very exciting job to meet alumni of your own college, learn about their life, career and converting them to donate funds to our university."
     }
+    {
+      title: "Hobbies:",
+      content: "trekking, finding best beaches, reading books"
+    }
   ],
   finalThoughts: {
     title: "That's just 1%!",
