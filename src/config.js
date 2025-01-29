@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Virginia, United States",
 };
 
-// Project Images
+// Project Images - all the images are uploaded in the public
 export const projectImages = {
   chessBattle: "/chess-bg.jpg",
   faucetAgent: "/faucet.jpg",
@@ -30,7 +30,7 @@ export const portfolioSections = [
     id: "software",
     title: "Software Engineering",
     path: "/software",
-    description: "Exploring the intersection of artificial intelligence and user experience through innovative projects and applications. Specializing in AI integration, language models, and intelligent system development."
+    description: "Geek who love to build things that make humans happy"
   },
   {
     id: "crypto",
