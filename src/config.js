@@ -57,6 +57,19 @@ export const projects = {
   software: [
     {
       id: 1,
+      title: "REMO - Personal AI Assistant",
+      description: "Remo is a Personal AI Assistant that can be hired by every human in the planet. Personal Assistant is not only for Rich! Remo helps make users' lives easier through seamless task management, informed recommendations, and efficient problem-solving.",
+      features: [
+        "Implemented Privy for auth and EVM wallet creation",
+        "Developed Viem based for Blockchain interactions on Ethereum Virtual Machines",
+        "Uses AWS Bedrock for LLM inference and AWS DynomoDB for storying data",
+        "Built self orchestrated multi agent collaboration between ai agents"
+      ],
+      technologies: ["React", "Typescript", "Viem", "Solidity", "AWS Bedrock", "DynomoDB"],
+      github: "https://github.com/susmithagurram/Remo"
+    },
+    {
+      id: 2,
       title: "Chess Battle",
       description: "An innovative online chess game that leverages OpenAI's Language Model API to enhance the gaming experience.",
       backgroundImage: projectImages.chessBattle,
@@ -71,7 +84,7 @@ export const projects = {
       live: "https://chessbattle-vf.vercel.app/"
     },
     {
-      id: 2,
+      id: 3,
       title: "EVM based Faucet AI agent",
       description: "An AI agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
       backgroundImage: projectImages.faucetAgent,
@@ -84,7 +97,7 @@ export const projects = {
       github: "https://github.com/suhasdasari/faucets-abstract2"
     },
     {
-      id: 3,
+      id: 4,
       title: "StepUp Health App",
       description: "A comprehensive health and fitness tracking mobile application for iOS and Android",
       backgroundImage: projectImages.stepUpHealth,
@@ -100,6 +113,19 @@ export const projects = {
   ai: [
     {
       id: 1,
+      title: "REMO - Personal AI Assistant",
+      description: "Remo is a Personal AI Assistant that can be hired by every human in the planet. Personal Assistant is not only for Rich! Remo helps make users' lives easier through seamless task management, informed recommendations, and efficient problem-solving.",
+      features: [
+        "Implemented Privy for auth and EVM wallet creation",
+        "Developed Viem based for Blockchain interactions on Ethereum Virtual Machines",
+        "Uses AWS Bedrock for LLM inference and AWS DynomoDB for storying data",
+        "Built self orchestrated multi agent collaboration between ai agents"
+      ],
+      technologies: ["React", "Typescript", "Viem", "Solidity", "AWS Bedrock", "DynomoDB"],
+      github: "https://github.com/susmithagurram/Remo"
+    },
+    {
+      id: 2,
       title: "Chess Battle",
       description: "An innovative online chess game that leverages OpenAI's Language Model API to enhance the gaming experience.",
       backgroundImage: projectImages.chessBattle,
@@ -114,7 +140,7 @@ export const projects = {
       live: "https://chessbattle-vf.vercel.app/"
     },
     {
-      id: 2,
+      id: 3,
       title: "EVM based Faucet AI agent",
       description: "An AI agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
       backgroundImage: projectImages.faucetAgent,
@@ -140,6 +166,19 @@ export const projects = {
       ],
       technologies: ["viem SDK", "Telegram Bot", "OpenAI API"],
       github: "https://github.com/suhasdasari/faucets-abstract2"
+    },
+        {
+      id: 1,
+      title: "REMO - Personal AI Assistant",
+      description: "Remo is a Personal AI Assistant that can be hired by every human in the planet. Personal Assistant is not only for Rich! Remo helps make users' lives easier through seamless task management, informed recommendations, and efficient problem-solving.",
+      features: [
+        "Implemented Privy for auth and EVM wallet creation",
+        "Developed Viem based for Blockchain interactions on Ethereum Virtual Machines",
+        "Uses AWS Bedrock for LLM inference and AWS DynomoDB for storying data",
+        "Built self orchestrated multi agent collaboration between ai agents"
+      ],
+      technologies: ["React", "Typescript", "Viem", "Solidity", "AWS Bedrock", "DynomoDB"],
+      github: "https://github.com/susmithagurram/Remo"
     }
   ]
 };
