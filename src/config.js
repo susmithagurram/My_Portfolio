@@ -1,8 +1,8 @@
 // Personal Information
 export const personalInfo = {
-  name: "Suhas Dasari",
-  email: "suhas.dasari194@gmail.com",
-  profilePicture: "/my-profile-picture.jpeg",
+  name: "Susmitha Gurram",
+  email: "gurramsusmithareddy8979@gmail.com",
+  profilePicture: "/my-profile-picture.jpg",
   location: "Virginia, United States",
 };
 
@@ -15,12 +15,12 @@ export const projectImages = {
 
 // Social Links
 export const socialLinks = {
-  github: "https://github.com/suhasdasari",
-  linkedin: "https://linkedin.com/in/suhasdasari",
-  twitter: "https://twitter.com/suhasdasari",
-  telegram: "https://t.me/suhasdasari",
-  etherscan: "https://etherscan.io/address/suhasdasari.eth",
-  substack: "https://suhasdasari.substack.com/",
+  github: "https://github.com/susmithagurram",
+  linkedin: "https://www.linkedin.com/in/susmithagurram/",
+  twitter: "https://x.com/Susmitha1399",
+  telegram: "https://t.me/SusmithaGurram",
+  etherscan: "https://etherscan.io/address/susmithagurram.eth",
+  substack: "https://susmithagurram.substack.com/",
   // Add more social links as needed
 };
 
@@ -30,7 +30,7 @@ export const portfolioSections = [
     id: "software",
     title: "Software Engineering",
     path: "/software",
-    description: "Geek who love to build things that make humans happy"
+    description: "Where there's a null, there's a way"
   },
   {
     id: "crypto",
@@ -40,7 +40,7 @@ export const portfolioSections = [
   },
   {
     id: "ai",
-    title: "Artificial Intelligence",
+    title: "LLM's / Artificial Intelligence",
     path: "/ai",
     description: "Experienced software engineer specializing in banking automation systems and mobile application development. Proficient in both legacy systems and modern technologies, with a focus on creating efficient, scalable solutions."
   },
@@ -85,19 +85,6 @@ export const projects = {
     },
     {
       id: 3,
-      title: "EVM based Faucet AI agent",
-      description: "An AI agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
-      backgroundImage: projectImages.faucetAgent,
-      features: [
-        "Implemented OpenAI API integration",
-        "used viem SDK to interact with the blockchain",
-        "Created a telegram bot to interact with users in a telegram group"
-      ],
-      technologies: ["typescript", "viem SDK", "Telegram Bot", "OpenAI API"],
-      github: "https://github.com/suhasdasari/faucets-abstract2"
-    },
-    {
-      id: 4,
       title: "StepUp Health App",
       description: "A comprehensive health and fitness tracking mobile application for iOS and Android",
       backgroundImage: projectImages.stepUpHealth,
@@ -139,34 +126,8 @@ export const projects = {
       github: "https://github.com/suhasdasari/chessbattlefinal",
       live: "https://chessbattle-vf.vercel.app/"
     },
-    {
-      id: 3,
-      title: "EVM based Faucet AI agent",
-      description: "An AI agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
-      backgroundImage: projectImages.faucetAgent,
-      features: [
-        "Implemented OpenAI API integration",
-        "used viem SDK to interact with the blockchain",
-        "Created a telegram bot to interact with users in a telegram group"
-      ],
-      technologies: ["viem SDK", "Telegram Bot", "OpenAI API"],
-      github: "https://github.com/suhasdasari/faucets-abstract2"
-    }
   ],
   crypto: [
-    {
-      id: 1,
-      title: "EVM based Faucet AI agent",
-      description: "An AI agent with his own wallet and can send a specific amount of tokens to any address once in every 24 hours.",
-      backgroundImage: projectImages.faucetAgent,
-      features: [
-        "Implemented OpenAI API integration",
-        "used viem SDK to interact with the blockchain",
-        "Created a telegram bot to interact with users in a telegram group"
-      ],
-      technologies: ["viem SDK", "Telegram Bot", "OpenAI API"],
-      github: "https://github.com/suhasdasari/faucets-abstract2"
-    },
         {
       id: 1,
       title: "REMO - Personal AI Assistant",
@@ -188,97 +149,166 @@ export const experience = {
   software: [
     {
       id: 1,
-      position: "Software Engineer",
-      company: "Zensar Technologies",
-      from: "March 2022",
-      to: "June 2023",
-      description: "Led development of automated banking solutions at NedBank",
+      position: "Graduate Teaching Assistant",
+      company: "George Mason University",
+      from: "January 2025",
+      to: "Present",
+      description: "Graduate Teaching Assistant",
       features: [
-        "Designed and implemented automated banking processes using COBOL and JCL",
-        "Managed 1,000+ real-time automated jobs in the database",
-        "Achieved seamless execution of critical banking processes",
-        "Implemented robust monitoring system using Control-M"
+        "Responsibilities include weekly announcements, Grading, Hands-on sessions and supporting, guiding students with their projects.",
+        "Utilized Canvas LMS, Blackboard LMS and Microsoft Outlook to manage the course content and student interactions.",      
       ],
-      technologies: ["Mainframe", "COBOL", "JCL", "SQL", "Control-M", "SQL", "Java", "Jira"]
+      technologies: ["Canvas LMS", "Blackboard LMS", "Microsoft Outlook"]
     },
     {
       id: 2,
       position: "Student Engagement Officer",
       company: "George Mason University",
       from: "January 2024",
-      to: "Currently Working",
+      to: "January 2025",
       description: "Managed a portfolio of local constituents and updated the Alumni Database",
       features: [
         "Reconnected 200+ alumni with the university through personalized outreach",
-        "Utilized Salesforce CRM to maintain and analyze data"
+        "Utilized Salesforce CRM to maintain and analyze data",
+        "Communicates the strategic vision of George Mason and our commitment to developing innovative programs to advance and support our students and graduates."
       ],
       technologies: ["Salesforce", "CRM"]
+    },
+    {
+      id: 3,
+      position: "Software Engineer",
+      company: "Tata Consultancy Services",
+      from: "December 2021",
+      to: "July 2023",
+      description: "Systems Operations Analyst - IAM",
+      features: [
+        "Responsibilities include protecting the data from internal and external Cyber attacks.",
+        "Worked with the Soc tools. Worked with Operation, Application and identity and Access management. Solved 1000+ incidents, tickets and requests.",
+        "Worked with the Soc tools like Qrador, Crowdstrike, Salesforce, Nexpose Scan, Azure AD and also with security tools.",
+        "Maintaining Excel reports of the data, managing,updating and storing them accordingly.",
+        "Worked as Team Lead for Soc Department where I have managed team of 11 members",
+        "Expertise in Cyber Security Domain, Java, Python programming and Worked with Data bases Oracle and MySQL"
+      ],
+      technologies: ["Cybersecurity", "SOC Tools", "Operations Management", "Application Management", "Identity and Access Management","Security Operations",  "SQL", "Java", "Python"]
     }
   ],
   crypto: [
     {
       id: 1,
-      position: "Community Manager",
-      company: "Shardeum",
-      from: "October 2022",
-      to: "July 2023",
-      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
+      position: "Graduate Teaching Assistant",
+      company: "George Mason University",
+      from: "January 2025",
+      to: "Present",
+      description: "Graduate Teaching Assistant",
       features: [
-        "Understood the community psychology, Implemented growth strategies",
-        "Organized 30+ technical workshops and educational events",
-        "Developed engagement strategies resulting in 500k+ member growth",
-        "Created educational content for blockchain technology"
+        "Responsibilities include weekly announcements, Grading, Hands-on sessions and supporting, guiding students with their projects.",
+        "Utilized Canvas LMS, Blackboard LMS and Microsoft Outlook to manage the course content and student interactions.",      
+      ],
+      technologies: ["Canvas LMS", "Blackboard LMS", "Microsoft Outlook"]
+    },
+    {
+      id: 2,
+      position: "Community Manager",
+      company: "Simba Exchange",
+      from: "February 2023",
+      to: "July 2023",
+      description: "Simba Exchange is a crypto exchange platform that provides a secure and easy-to-use platform for trading, buying and selling cryptocurrencies.",
+      features: [
+        "Developing comprehensive marketing plans targeting diverse audiences",
+        "Contributing innovative ideas and insights to product development discussions",
+        "Developed engagement strategies resulting in 300k+ member growth",
+        "Forging partnerships with Dapps, facilitating collaboration for community-driven projects, and fostering a culture of openness across multiple initiatives."
       ],
       technologies: ["Community Management", "Discord", "Organising Events"]
     },
     {
-      id: 2,
+      id: 3,
       position: "Community & Marketing Manager",
-      company: "DotNames",
-      from: "January 2023",
-      to: "July 2023",
-      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
+      company: "Blazpay",
+      from: "August 2023",
+      to: "May 2024",
+      description: "Blazpay is a payment gateway",
       features: [
-        "Bootstraped community and marketing strategies for twitter, discord, telegram",
-        "Implemented quest campaings with 200k+ participants",
+        "Applied principles of community psychology to engage and empower local communities, organizing events, and collaborating with stakeholder",
+        "Planned and executed offline and online events to foster community engagement, curating content and evaluating effectiveness for improvement",
         "Created marketing content for the community",
-        "Organised 20+ events, 100+ partnerships for the community",
-        "Launched mutliple Name Services on EVM and Cosmos Blockchains"
+        "Generated content against various platforms to drive community engagement.",
+        "Built 500k+ users Community"
       ],
       technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
+    },
+    {
+      id: 4,
+      position: "Contributor, Community Outreach",
+      company: "Shardeum",
+      from: "November 2022",
+      to: "July 2023",
+      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a Community Manager for the discord server",
+      features: [
+        "Organized 30+ technical workshops and educational events",
+        "Responsibilities are conducting events at colleges, private spaces and also virtual events providing basic knowledge about blockchain to students Crypto, web 3 enthusiasts. "
+      ],
+      technologies: ["Contributor", "Community Outreach", "Discord", "Organising Events"]
     }
+  
   ],
   community: [
     {
       id: 1,
-      position: "Community Manager",
-      company: "Shardeum",
-      from: "October 2022",
-      to: "July 2023",
-      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a Community Manager for the discord server",
+      position: "Graduate Teaching Assistant",
+      company: "George Mason University",
+      from: "January 2025",
+      to: "Present",
+      description: "Graduate Teaching Assistant",
       features: [
-        "Understood the community psychology, Implemented growth strategies",
-        "Organized 30+ technical workshops and educational events",
-        "Developed engagement strategies resulting in 500k+ member growth",
-        "Created educational content for blockchain technology"
+        "Responsibilities include weekly announcements, Grading, Hands-on sessions and supporting, guiding students with their projects.",
+        "Utilized Canvas LMS, Blackboard LMS and Microsoft Outlook to manage the course content and student interactions.",      
+      ],
+      technologies: ["Canvas LMS", "Blackboard LMS", "Microsoft Outlook"]
+    },
+    {
+      id: 2,
+      position: "Community Manager",
+      company: "Simba Exchange",
+      from: "February 2023",
+      to: "July 2023",
+      description: "Simba Exchange is a crypto exchange platform that provides a secure and easy-to-use platform for trading, buying and selling cryptocurrencies.",
+      features: [
+        "Developing comprehensive marketing plans targeting diverse audiences",
+        "Contributing innovative ideas and insights to product development discussions",
+        "Developed engagement strategies resulting in 300k+ member growth",
+        "Forging partnerships with Dapps, facilitating collaboration for community-driven projects, and fostering a culture of openness across multiple initiatives."
       ],
       technologies: ["Community Management", "Discord", "Organising Events"]
     },
     {
-      id: 2,
+      id: 3,
       position: "Community & Marketing Manager",
-      company: "DotNames",
-      from: "January 2023",
-      to: "July 2023",
-      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a  Commmunity Manager for the discord server",
+      company: "Blazpay",
+      from: "August 2023",
+      to: "May 2024",
+      description: "Blazpay is a payment gateway",
       features: [
-        "Bootstraped community and marketing strategies for twitter, discord, telegram",
-        "Implemented quest campaings with 200k+ participants",
+        "Applied principles of community psychology to engage and empower local communities, organizing events, and collaborating with stakeholder",
+        "Planned and executed offline and online events to foster community engagement, curating content and evaluating effectiveness for improvement",
         "Created marketing content for the community",
-        "Organised 20+ events, 100+ partnerships for the community",
-        "Launched mutliple Name Services on EVM and Cosmos Blockchains"
+        "Generated content against various platforms to drive community engagement.",
+        "Built 500k+ users Community"
       ],
       technologies: ["Community Management", "Marketing", "Partnerships", "Campaigns"]
+    },
+    {
+      id: 4,
+      position: "Contributor, Community Outreach",
+      company: "Shardeum",
+      from: "November 2022",
+      to: "July 2023",
+      description: "Shardeum is a Layer 1 blockchain that is built on Ethereum Virtual Machine (EVM). I worked as a Community Manager for the discord server",
+      features: [
+        "Organized 30+ technical workshops and educational events",
+        "Responsibilities are conducting events at colleges, private spaces and also virtual events providing basic knowledge about blockchain to students Crypto, web 3 enthusiasts. "
+      ],
+      technologies: ["Contributor", "Community Outreach", "Discord", "Organising Events"]
     }
   ]
 };
@@ -286,12 +316,10 @@ export const experience = {
 // Achievements
 export const achievements = {
   crypto: [
-    "Built and managed crypto communities with over 1.5 million active members",
+    "Built and managed crypto communities with over 1 million active members",
     "Successfully organized and executed 50+ educational events and workshops",
     "Mentored 1000+ students in blockchain technology and smart contract development",
     "Established partnerships with 7 universities for blockchain education programs",
-    "Partnered with 100+ projects in the blockchain space including top Layer 1 blockchains",
-    "Implemented quest campains with 200k+ participants using crew3, galxe, etc"
   ],
   software: [],
   ai: [],
@@ -319,8 +347,8 @@ export const blogPosts = [
 
 // Site Configuration
 export const siteConfig = {
-  title: "Suhas Dasari - Personal Portfolio",
-  description: "Software Engineer with expertise in AI, Blockchain, and Community Management. Passionate about building innovative solutions and fostering tech communities.",
+  title: "Susmitha Gurram - Personal Portfolio",
+  description: "Software Engineer with expertise in Cybersecurity, AI, Blockchain. Passionate about building innovative solutions and fostering tech communities.",
   favicon: personalInfo.profilePicture,
   showBlog: true, // Set to false if you don't want to show the blog section
   blogPath: "/blogs",
@@ -334,38 +362,37 @@ export const siteConfig = {
 
 // Story Content
 export const storyContent = {
-  title: "Forging Paths: A Curious Mind's Journey",
-  goal: "Goal - Dedicated to the betterment of mankind, I will continuously learn, innovate, and help others, regardless of whether I am a leader or a follower",
+  title: "Its My Journey",
+  goal: "GOAL : Continuously learn and adapt to new technologies by building and growing sustainability. ",
   birthInfo: [
-    "Born on 17th November 1999 in INDIA to a loving middle class family - Dad :Retired Army Soldier, Mom :housewife and a Big brother.",
-    "I was an average student in school, but I was always passionate about learning new things. I was always curious about how things work and how to make them work better. I always had a dream to make a difference in the world. At my early age I wanted to become a Soldier like my father but my mind took me to a different path, arbitrating by buying cycles and selling them at a profit to other children when i was 9 years old, having my own seasonal firecracker store ar the age of 16, affiliating with upstox as a stock broker at the age of 17 - ps: it was on my brother identity as I was under age to have a stock broker account. On the other hand, I was motivated by Jackie Chan, Bruce Lee, and Sylvester Stallone. I started learning martial arts like Taekwando, Kalaripayattu, Yoga, Sword fight, Stick fight, and many more for half of my life as of now.",
-    "Nevertheless, I completed my schooling in 2015 from Rao's high School in Hyderabd, INDIA and completed my Bachelors in Mechanical Engineering from Malla Reddy College of Engineering in 2021 from Hyderabad, INDIA. Currently pursuing my Masters in Information Systems and working as a Student Engagement Officer in George Mason University, Fairfax, USA.",
-    "Here are my some of the most important milestones in my life:"
+    "My journey began in India where I was born to a loving middle class family on 13th August 1999. Father :Entrepreneur, Mother :Homemaker, and an Elder brother..",
+    "After many fights and thoughts my parents named me Susmitha and there started me, building my own identity. As everyone I was also a girl with many goals, dreams and  passion towards my journey. I am that person who is very passionate about both studies and extracurricular activities. Since childhood I was brought up with a saying by my father that \"Education is the only way to see yourself somewhere else.\" and this completely fixed in my mind where I have been a first class student. I used to learn sangeetham and classical dance when i was 10 yrs old and one more thing even my parents do not know till now that I went to martial arts for a month with my friend(Top secret Haha).When I was in 7th standard I decided to become a doctor but unfortunately my 10th class results changed this to becoming an engineer. I did not argue about taking or either be forced to do so but after my 10th results I lost my confidence to become a doctor. Apart from what my dream was I worked very hard in my engineering and there goes my journey with lots of professional and personal experiences.",
+    "Nonetheless, I completed my schooling in 2015 at St. Alphonsa's High School in Hyderabad, INDIA. I have completed my 12th grade in 2017 at Narayana Junior College, Hyderabad and completed my bachelors in Mechanical Engineering at Malla Reddy Engineering College and graduated in 2021. Currently I am pursuing a Master's in Information Systems at George Mason University, USA.",
+    "Here are some of my professional experiences in my journey till now:"
   ],
   milestones: [
     {
-      title: "Entering the Money Markets - Stock Broker / Affiliated Partner - Mentoring",
-      content: "In 2020, during my third year of my Bachelors in India, I joined as an Affiliated Partner with Upstox and Motilal Oswal. This involved mentoring clients, handling marketing efforts, engaging in cold calling to expand my client base, and conducting mentorship classes. At the peak, I managed over 5,000 active clients and a total of 14,000 clients. My responsibilities included providing comprehensive support and education to help clients navigate stocks, currency, and commodities markets, deepening my understanding of market dynamics."
+      title: "MY FIRST JOB - SOFTWARE ENGINEER - CYBER SECURITY DOMAIN",
+      content: "After my graduation in September 2021, I received my first offer letter as a Software Engineer at Tata Consultancy services and joined on 23rd December 2021. The first job is always a special one and it makes us start, learn and think about finding our career paths. Even my first job made me do the same. After joining I was allocated to a project which comes under the cyber security domain. The project and my learning skills were completely different but I didn't give up, started learning about it and all thanks to my team who are wonderful. I was an SOC analyst for Operations Segment. My work is to monitor, solve incidents and raise tickets based on the incidents. Worked with many soc tools, been a team lead for 11 members, certified with TCS badge."
     },
     {
-      title: "My First Job - Software Engineer - MainFrame Developer",
-      content: "After graduating in 2022, I joined Zensar Technologies Limited as a Software Engineer and Mainframe Developer. My role focused on delivering timely solutions to complex queries and issues, ensuring uninterrupted automated banking processes and direct client interactions. I monitored real-time automated jobs, resolved critical queries, and mentored fellow associates. This role honed my expertise in programming languages like Java, JCL, COBOL, and SQL."
+      title: "FREELANCING - COMMUNITY MANAGER - BLOCKCHAIN",
+      content: "In 2023, I worked as a Community Manager at Simba Exchange and Blazpay. I conjured communities of over 300k users.From November 2022 to July 2023, I worked as a Contributor and Web3 Educator at Shardeum to over 1000 students across 10+ colleges."
     },
     {
-      title: "Cryptocurrency, Blockchain, Marketing, and Community",
-      content: "In 2021-2022, I started as a freelancer with Shardeum, building and managing their Discord community. This role evolved into a full-time freelance position, where I interacted with global community members, addressed queries, understood community psychology, and developed engagement ideas. I organised workshops, meet-ups, and webinars, focusing on community growth and effective Discord workflows.\n\nIn 2023, I transitioned to DotNames as the Chief Marketing Officer. Here, I drove marketing initiatives, developing and executing strategies to enhance community growth, expand social media presence, establish partnerships, and manage brand positioning."
-    },
+      title: "STUDENT ENGAGEMENT OFFICER - GEORGE MASON UNIVERSITY",
+    content: "In December 2023, I worked as a Student Engagement Officer in the Office of Advancement and Alumni Relations at George Mason University. My responsibilities involved meeting with alumni, both offline and online, managing data in the Salesforce, and cold emailing prospects. Indeed this is a very exciting job to meet alumni of your own college, learn about their life, career and convert them to donate funds to our university."    
+  },
     {
-      title: "Journey to US - George Mason University - Student Engagement Officer",
-      content: "In 2023 I moved to US and joined GMU on F-1 student visa to do my Masters in Information Systems. And in Jan 2024 I got an on-campus part-time as a Student Engagement Officer (current profession) in Office of Advancements & Alumni Relations. This role involved meeting alumni both offline and online, managing data in the Salesforce, and cold emailing prospects. Indeed this is a very exciting job to meet alumni of your own college, learn about their life, career and converting them to donate funds to our university."
-    },
+      title: "GRADUATE TEACHING ASSISTANT - GEORGE MASON UNIVERSITY",
+    content: "In Jan 2025, I got an opportunity as a Graduate Teaching Assistant (current profession) at George Mason University. I work as a GTA for two applied information technology subjects where my responsibilities include weekly announcements, Grading, Hands-on sessions and supporting, guiding students with their projects."    
+  },
     {
       title: "Hobbies:",
-      content: "trekking, finding best beaches, reading books"
+      content: "Reading Books (especially psychology), trekking, painting, shopping"
     }
   ],
   finalThoughts: {
-    title: "That's just 1%!",
-    quote: "Best Suggestion I give myself \"Learn from other people stories, keep updating new things to your life, Keep Learning, Stay Healthy, Stay Happy\""
-  }
+    quote: "Self Suggestion: Practice making more decisions based on logic rather than emotion"
+    }
 }; 
